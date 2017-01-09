@@ -561,6 +561,22 @@ pre {
   animation: tuningneedle 10s ease infinite;
 }
 
+@media (max-width: 640px) {
+  .no-touch .projects-feed .project a:hover #speaker-small {
+    animation: speakerbounce .75s ease infinite;
+  }
+}
+
+@keyframes speakerbounce {
+  2%  { transform: scale(1.2) translateX(-18px) translateY(-18px); stroke-width: 10;}
+  5%  { transform: scale(1.0);  stroke-width: 11;}
+  7% { transform: scale(1.1) translateX(-10px) translateY(-10px); stroke-width: 10;}
+  9% { transform: scale(1.0);  stroke-width: 11;}
+  12% { transform: scale(1.15) translateX(-16px) translateY(-16px);  stroke-width: 10;}
+  75% { transform: scale(1.0);  stroke-width: 11;}
+  77% { transform: scale(1.15) translateX(-16px) translateY(-16px);  stroke-width: 10;}
+}
+
 /* POCKETWALK - icon bounce */
 
 @keyframes trace {
