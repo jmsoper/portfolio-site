@@ -774,11 +774,13 @@ pre {
 .thumb img {
     width: 100%;
     height: auto;
+    max-height: 100vw;
 }
 
 .thumb svg {
     width: 100%;
     height: auto;
+    max-height: 100vw;
 }
 div.image,
 div.audio,
