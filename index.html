@@ -260,7 +260,31 @@
     <script src="scripts/jquery.fitvids.js"></script>
     <script src="scripts/jquery.imagesloaded.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script>
+    function onVisibilityChange(el, callback) {
+      var old_visible;
+        return function () {
+          var visible = isElementInViewport(el);
+          if (visible != old_visible) {
+            old_visible = visible;
+          if (typeof callback == 'function') {
+            callback(visible);
+            }
+          }
+        }
+      }
+      var handler = onVisibilityChange(el, function(visible) {
+        if (visible) {
+           if $("#speaker-small").hasClass("onscreen")) return;
+           $("#speaker-small").addClass("onscreen");
+        } else {
+           if !$("#speaker-small").hasClass("onscreen")) return;
+           $("#speaker-small").removeClass("onscreen");
+        }
+      });
 
+      $(window).on('DOMContentLoaded load resize scroll', handler);
+    </script>
 
 </body>
 </html>

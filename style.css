@@ -565,6 +565,9 @@ pre {
   .no-touch .projects-feed .project a:hover #speaker-small {
     animation: speakerbounce .75s ease infinite;
   }
+  .no-touch .projects-feed .project #speaker-small.onscreen{
+    animation: speakerbounce .75s ease infinite;
+  }
 }
 
 @keyframes speakerbounce {
