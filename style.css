@@ -560,15 +560,13 @@ pre {
 .no-touch .projects-feed .project a:hover #needle {
   animation: tuningneedle 10s ease infinite;
 }
-
-@media (max-width: 640px) {
   .no-touch .projects-feed .project a:hover #speaker-small {
     animation: speakerbounce .75s ease infinite;
   }
   .no-touch .projects-feed .project #speaker-small.onscreen{
     animation: speakerbounce .75s ease infinite;
   }
-}
+
 
 @keyframes speakerbounce {
   2%  { transform: scale(1.2) translateX(-18px) translateY(-18px); stroke-width: 10;}
